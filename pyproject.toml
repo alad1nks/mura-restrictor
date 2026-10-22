@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mura-restrictor"
+version = "0.1.0"
+description = "Delete messages forwarded by a selected Telegram group member"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["python-telegram-bot==22.8", "python-dotenv>=1.0,<2"]
+
+[project.scripts]
+mura-restrictor = "mura_restrictor.bot:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
